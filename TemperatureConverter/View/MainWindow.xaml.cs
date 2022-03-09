@@ -27,13 +27,22 @@ namespace View
 
         private void convertToCelsius(object sender, RoutedEventArgs e)
         {
-            String fahr = textBox.Text;
+            String fahr = textBoxF.Text;
             double fahrInt = double.Parse(fahr);
             double celsiusAfterConv = (fahrInt - 32) / 1.8;
             string celsiusString = celsiusAfterConv.ToString(); 
-            textBox.Text = celsiusString; 
-            MessageBox.Show(this, fahr, "Clicked!");
+            textBoxF.Text = celsiusString; 
+           // MessageBox.Show(this, fahr, "Clicked!");
             
+        }
+
+        private void convertToFahrenheit(object sender, RoutedEventArgs e)
+        {
+            String celsius = textBoxC.Text;
+            double celsInt = double.Parse(celsius);
+            double fahrAfterConv = (celsInt * 1.8) + 32;
+            string fahrString = fahrAfterConv.ToString();
+            textBoxC.Text = fahrString;
         }
     }
 }
