@@ -6,11 +6,25 @@
         xmlns:local="clr-namespace:View"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="brush" StartPoint="0,0" EndPoint="1,0">
+            <GradientStop Color="DarkGreen" Offset="0" />
+            <GradientStop Color="White" Offset="1" />
+        </LinearGradientBrush>
+    </Window.Resources>
     <StackPanel >
-        <TextBlock Text="Fahrenheit" Background="AliceBlue" FontWeight="Bold" Padding="7" FontSize="16" TextAlignment="Center"/>
+        <TextBlock Text="Fahrenheit" FontWeight="Bold" Padding="7" FontSize="16" TextAlignment="Center" Background="{StaticResource brush}">
+         
+        </TextBlock>
+        
         <TextBox x:Name="textBoxF"/>
         <Button Content="Convert to Celsius" Click="convertToCelsius"/>
-        <TextBlock Text="Celsius" Background="AliceBlue" FontWeight="Bold" Padding="7" FontSize="16" TextAlignment="Center"/>
+
+
+        <TextBlock Text="Celsius"  FontWeight="Bold" Padding="7" FontSize="16" TextAlignment="Center" Background="{StaticResource brush}">
+            
+        </TextBlock>
+        
         <TextBox x:Name="textBoxC" />
         <Button Content="Convert to Fahrenheit" Click="convertToFahrenheit"/>
     </StackPanel>
