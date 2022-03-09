@@ -27,8 +27,13 @@ namespace View
 
         private void convertToCelsius(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(this, "You clicked the button", "Clicked!");
-            textBox.Text = "You clicked the buttonxd";
+            String fahr = textBox.Text;
+            double fahrInt = double.Parse(fahr);
+            double celsiusAfterConv = (fahrInt - 32) / 1.8;
+            string celsiusString = celsiusAfterConv.ToString(); 
+            textBox.Text = celsiusString; 
+            MessageBox.Show(this, fahr, "Clicked!");
+            
         }
     }
 }
