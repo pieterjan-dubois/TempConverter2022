@@ -7,9 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <StackPanel >
+        <TextBlock Text="Fahrenheit" Background="AliceBlue" FontWeight="Bold" Padding="7" FontSize="16" TextAlignment="Center"/>
         <TextBox x:Name="textBoxF"/>
         <Button Content="Convert to Celsius" Click="convertToCelsius"/>
-        <TextBox x:Name="textBoxC"/>
+        <TextBlock Text="Celsius" Background="AliceBlue" FontWeight="Bold" Padding="7" FontSize="16" TextAlignment="Center"/>
+        <TextBox x:Name="textBoxC" />
         <Button Content="Convert to Fahrenheit" Click="convertToFahrenheit"/>
     </StackPanel>
 </Window>
