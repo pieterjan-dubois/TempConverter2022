@@ -58,9 +58,7 @@
             <Button Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Content="Convert" Click="ConvertToCelsius" Style="{StaticResource buttonStyle}" />
         </Grid>
 
-        <TextBlock Text="Fahrenheit" Style="{StaticResource labelStyle}" />
-        <TextBox x:Name="fahrenheitTextBox" Style="{StaticResource textBoxStyle}" />
-        <Button Content="Convert" Click="ConvertToCelsius" Style="{StaticResource buttonStyle}" />
+      
     </StackPanel>
 
 </Window>
