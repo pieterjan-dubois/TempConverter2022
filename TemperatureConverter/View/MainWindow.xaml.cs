@@ -25,6 +25,17 @@ namespace View
             InitializeComponent();
         }
 
+        private void SliderValueChanged(object sender, RoutedEventArgs e)
+        {
+            var kelvinString = kelvinTextBox.Text;
+            var kelvin = double.Parse(kelvinString);
+            double kelvinToCelsius = kelvin - 273.15;
+            double kelvinToFahrenheit = kelvin * 1.8 - 459.67;
+            var celsiusString = kelvinToCelsius.ToString();
+            var fahrString = kelvinToFahrenheit.ToString();
+            celsiusTextBox.Text = celsiusString;
+            fahrenheitTextBox.Text = fahrString;
+        }
         private void ConvertCelsius(object sender, RoutedEventArgs e)
         {
             var celsiusString = celsiusTextBox.Text;
