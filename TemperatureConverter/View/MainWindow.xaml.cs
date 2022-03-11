@@ -31,13 +31,15 @@ namespace View
             var celsius = kelvin - 273.15;
             var fahrenheit = celsius * 1.8 + 32;
 
-            var kelvinString = kelvin.ToString();
+           
             var fahrenheitString = fahrenheit.ToString();
             var celsiusString = celsius.ToString();
 
-            kelvinTextBox.Text = kelvinString;
+           
             fahrenheitTextBox.Text = fahrenheitString;
             celsiusTextBox.Text = celsiusString;
+
+
 
         }
     }
