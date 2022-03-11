@@ -29,8 +29,8 @@ namespace View
         {
             var celsiusString = celsiusTextBox.Text;
             var celsius = double.Parse(celsiusString);
-            var celsiusToKevin = celsius + 273.15;
-            var celsiusToFahrenheit = (celsius * 1.8) +32;
+            double celsiusToKevin = celsius + 273.15;
+            double celsiusToFahrenheit = (celsius * 1.8) +32;
             var kevinString = celsiusToKevin.ToString();
             var fahrString = celsiusToFahrenheit.ToString();
             fahrenheitTextBox.Text = fahrString;
@@ -40,8 +40,8 @@ namespace View
         {
             var fahrenheitString = fahrenheitTextBox.Text;
             var fahrenheit = double.Parse(fahrenheitString);
-            var fahrenheitToCelsius = (fahrenheit - 32) / 1.8;
-            var fahrenheitToKelvin = (fahrenheit - 32) / 1.8 + 273.15;
+            double fahrenheitToCelsius = (fahrenheit - 32) / 1.8;
+            double fahrenheitToKelvin = (fahrenheit - 32) / 1.8 + 273.15;
             var celsiusString = fahrenheitToCelsius.ToString();
             var kelvinString = fahrenheitToKelvin.ToString();
             celsiusTextBox.Text = celsiusString;
@@ -52,8 +52,8 @@ namespace View
         {
             var kelvinString = kelvinTextBox.Text;
             var kelvin = double.Parse(kelvinString);
-            var kelvinToCelsius = kelvin - 273.15;
-            var kelvinToFahrenheit = kelvin * 1.8 - 459.67;
+            double kelvinToCelsius = kelvin - 273.15;
+            double kelvinToFahrenheit = kelvin * 1.8 - 459.67;
             var celsiusString = kelvinToCelsius.ToString();
             var fahrString = kelvinToFahrenheit.ToString();
             fahrenheitTextBox.Text = fahrString;
