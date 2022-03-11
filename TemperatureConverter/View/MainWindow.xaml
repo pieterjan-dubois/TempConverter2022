@@ -20,29 +20,47 @@
             <Setter Property="FontSize" Value="16" />
             <Setter Property="Padding" Value="2" />
         </Style>
-
+        <Style x:Key="textBoxStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="16" />
+        </Style>
+        <Style x:Key="buttonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="16" />
+        </Style>
     </Window.Resources>
-    <StackPanel >
+    
+    <StackPanel>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition />
+                <RowDefinition />
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Text="Celsius" Style="{StaticResource labelStyle}"/>
-            <TextBox Grid.Row="1" x:Name="tekstBoxC" Style="{StaticResource textBoxStyle}"/>
+            <TextBlock Grid.Row="0" Text="Celsius" Style="{StaticResource labelStyle}" />
+            <TextBox Grid.Row="1"  x:Name="celsiusTextBox" Style="{StaticResource textBoxStyle}" />
             <Button Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Content="Convert" Click="ConvertToFahrenheit" Style="{StaticResource buttonStyle}" />
         </Grid>
-        
-        <TextBlock Text="Fahrenheit" FontWeight="Bold" Padding="7" FontSize="16" TextAlignment="Center" Background="{StaticResource brush}">
-         
-        </TextBlock>
-        
-        <TextBox x:Name="textBoxF"/>
 
-        <Button Content="Convert to Fahrenheit" Click="convertToFahrenheit"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Fahrenheit" Style="{StaticResource labelStyle}" />
+            <TextBox Grid.Row="1"  x:Name="fahrenheitTextBox" Style="{StaticResource textBoxStyle}" />
+            <Button Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Content="Convert" Click="ConvertToCelsius" Style="{StaticResource buttonStyle}" />
+        </Grid>
+
+        <TextBlock Text="Fahrenheit" Style="{StaticResource labelStyle}" />
+        <TextBox x:Name="fahrenheitTextBox" Style="{StaticResource textBoxStyle}" />
+        <Button Content="Convert" Click="ConvertToCelsius" Style="{StaticResource buttonStyle}" />
     </StackPanel>
+
 </Window>
